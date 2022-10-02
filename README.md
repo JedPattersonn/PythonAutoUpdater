@@ -86,4 +86,5 @@ So here we are telling the user that we have found a new update, and that we are
 I am no way saying this is the optimal solution, but this is what I use and it works well for my needs. Setting up a Heroku server is very easy and there are loads of videos online going through the setup process. 
 
 If you have any improvements or questions about this, don't hesitate to reach out.
+
 Discord - PolarOrb5705#3951
