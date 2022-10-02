@@ -60,7 +60,7 @@ I will include the snippet below of the code required. You should call this firs
 def checkVersion():
   print"Checking for updates...")
   r = requests.get("https://name.herokuapp.com/version")
-  r.text = newestVersion
+  newestVersion = r.text
   if newestVersion == currentVersion:
      print("No updates found")
   else:
