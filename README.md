@@ -81,3 +81,9 @@ You may notice the `currentVersion` variable and that it hasn't been delcared ye
         sys.exit()
 ```
 So here we are telling the user that we have found a new update, and that we are downloading it. The `output_file` variable we are declaring is what the file will be called. Due to some permission issues when trying to delete the file you have open, we need to create a new one. Change `Application Name` to whatever your software is called. The file will then be called `Name V0.2.9.1.exe`. We then make the request and put the file we get in the same directory as the current version. After that it is just a simple line saying we have downloaded the new file and where you can find it. Once the user presses a key acknowledging this, the window will close.
+
+# Conclusion
+I am no way saying this is the optimal solution, but this is what I use and it works well for my needs. Setting up a Heroku server is very easy and there are loads of videos online going through the setup process. 
+
+If you have any improvements or questions about this, don't hesitate to reach out.
+Discord - PolarOrb5705#3951
