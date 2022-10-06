@@ -58,7 +58,7 @@ We have now covered the basics of the API we need. Below I will detail what is n
 I will include the snippet below of the code required. You should call this first function alongside any other checks you do upon startup of the app, such as license authentication and any file checks.
 ```python
 def checkVersion():
-  print"Checking for updates...")
+  print("Checking for updates...")
   r = requests.get("https://name.herokuapp.com/version")
   newestVersion = r.text
   if newestVersion == currentVersion:
@@ -70,15 +70,15 @@ You may notice the `currentVersion` variable and that it hasn't been delcared ye
 
 ```python
  def downloadUpdate(newestVersion):
-        print("Update found, downloading...")
-        url = "https://name.herokuapp.com/download"
+  print("Update found, downloading...")
+  url = "https://name.herokuapp.com/download"
 
-        output_file = f"Application Name V{newestVersion}.exe"
-        with urllib.request.urlopen(url) as response, open(output_file, 'wb') as out_file:
-            shutil.copyfileobj(response, out_file)
+  output_file = f"Application Name V{newestVersion}.exe"
+  with urllib.request.urlopen(url) as response, open(output_file, 'wb') as out_file:
+    shutil.copyfileobj(response, out_file)
 
-        input("Check your folder for the latest version. Press any key to close this window...")
-        sys.exit()
+  input("Check your folder for the latest version. Press any key to close this window...")
+  sys.exit()
 ```
 So here we are telling the user that we have found a new update, and that we are downloading it. The `output_file` variable we are declaring is what the file will be called. Due to some permission issues when trying to delete the file you have open, we need to create a new one. Change `Application Name` to whatever your software is called. The file will then be called `Name V0.2.9.1.exe`. We then make the request and put the file we get in the same directory as the current version. After that it is just a simple line saying we have downloaded the new file and where you can find it. Once the user presses a key acknowledging this, the window will close.
 
